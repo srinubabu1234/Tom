@@ -1,0 +1,43 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="helloBean" class="com.mkyong.common.HelloWorld">
+		<property name="name" value="Mkyong" />
+		<property name="studentsData">
+			<set>
+				<value>Oracle</value>
+				<value>Sun</value>
+				<value>Java4s</value>
+				<value>Sun</value>
+
+			</set>
+		</property>
+	</bean>
+	<bean id="user" class="com.mkyong.common.User"
+		autowire="autodetect" scope="prototype">
+		<property name="id" value="001" />
+		<!-- <property name="fullname" value="ABCD TEST" /> -->
+		<!-- <property name="address" ref="address" /> <property name="address"> 
+			<ref parent="address" /> </property> -->
+	</bean>
+	<bean id="address" class="com.mkyong.common.Address">
+		<constructor-arg value="123" index="0" />
+		<constructor-arg value="100" index="2" />
+		<constructor-arg value="Madhapur" index="1" />
+
+		<property name="area" value="Madhapur, Hyderabad, TG" />
+		<property name="userId" value="001" />
+	</bean>
+	<!-- <bean id="customerLCBean"
+		class="com.rs.commom.beanls.CustomerLCBean">
+		<property name="name" value="SRINUBABU" />
+	</bean> -->
+	<bean id="customerLCBean"
+		class="com.rs.commom.beanls.CustomerLCBean"
+		init-method= "init" destroy-method="destroy">
+		<property name="name" value="SRINUBABU" />
+	</bean>
+
+</beans>

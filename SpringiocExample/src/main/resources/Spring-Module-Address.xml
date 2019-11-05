@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	
+	<!-- <bean id="address123" class="com.mkyong.common.Address">
+	<constructor-arg value ="123" index="0"/>
+		<constructor-arg value ="100" index="2"/>
+		<constructor-arg value ="Madhapur" index="1"/>
+	
+		 <property name="area" value="Madhapur, Hyderabad, TG" />
+		<property name="userId" value="001" />
+	</bean> -->
+</beans>
